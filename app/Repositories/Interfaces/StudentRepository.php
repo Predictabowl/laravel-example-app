@@ -2,7 +2,7 @@
 
 namespace App\Repositories\Interfaces;
 
-use \App\Models\User;
+use App\Models\Student;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -14,7 +14,7 @@ use \App\Models\User;
  *
  * @author piero
  */
-interface UserRepository {
+interface StudentRepository {
     //put your code here
-    public function find(int $id): User;
+    public function find(int $id): Student;
 }

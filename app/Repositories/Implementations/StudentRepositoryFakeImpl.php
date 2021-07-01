@@ -2,7 +2,8 @@
 
 namespace App\Repositories\Implementations;
 
-use \App\Repositories\Interfaces\UserRepository;
+use \App\Repositories\Interfaces\StudentRepository;
+use App\Models\Student;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -15,10 +16,13 @@ use \App\Repositories\Interfaces\UserRepository;
  *
  * @author piero
  */
-class UserRepositoryImpl implements UserRepository{
+class StudentRepositoryFakeImpl implements StudentRepository{
     //put your code here
-    public function find(int $id): \App\Models\User {
-        
+    public function find(int $id): Student{
+        $student = new Student();
+        $student->setId(1);
+        $student->setName("Mario");
+        return $student;
     }
 
 }

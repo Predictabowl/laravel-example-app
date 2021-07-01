@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use App\Repositories\Interfaces\StudentRepository;
+use App\Repositories\Implementations\StudentRepositoryFakeImpl;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -14,6 +16,7 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         //
+        $this->app->bind(StudentRepository::class, StudentRepositoryFakeImpl::class);
     }
 
     /**
